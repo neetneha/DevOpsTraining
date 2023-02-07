@@ -1,0 +1,29 @@
+2. You need to find a file named myfile.txt somewhere in your Linux file system. Which is thecorrect command to do this? [2]
+   
+   
+   nano shellfile1
+   
+   #!/bin/bash
+
+echo "you want to find file named myfile.txt $1?"
+echo "please enter yes or no"
+read ans
+echo $ans
+case $ans in
+ "yes") rm $1
+echo "file found"
+;;
+"no") echo "file not found"
+;;
+*) echo " not understand your request"
+esac
+
+   chmod 777 shellfile1
+   
+   ./shellfile1
+   
+   
+ 
+   
+
+
